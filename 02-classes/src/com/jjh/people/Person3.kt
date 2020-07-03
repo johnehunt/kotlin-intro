@@ -1,6 +1,6 @@
 package com.jjh.people
 
-class Person3(val name: String, var age: Int) {
+class Person3(val name: String = "", var age: Int = 0) {
 
     init {
         println("In Init")

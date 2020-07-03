@@ -1,7 +1,5 @@
 package com.jjh.people
 
-import com.jjh.people.Person
-
 object PersonApp {
     @JvmStatic
     fun main(args: Array<String>) {
@@ -9,6 +7,7 @@ object PersonApp {
         println(p)
         println(p.name + " is " + p.age)
         p.age = 55
+        // p.name = "Bob" // Compilation error as name is a read only val
         println(p.name + " is " + p.age)
         println(p)
         val p1 = Person("John", 55)
