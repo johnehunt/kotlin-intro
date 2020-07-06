@@ -11,5 +11,15 @@ object StringExtApp {
 
         val obj = MyClass()
         obj.printMe("Hello")
+
+        // Infix oeprator example
+        println("-" m 25)
+        // same as
+        println("-".m(25))
+
+        // Note infix function calls have
+        // lower precedence than arithmetic operators
+        println("-" m 2 + 3) // same as "-" m 5
+
     }
 }
