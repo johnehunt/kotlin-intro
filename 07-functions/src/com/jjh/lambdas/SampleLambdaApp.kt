@@ -4,7 +4,7 @@ object SampleLambdaApp {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        // Lambda expression
+        // Lambda expression - last expression implicitly returned
         val func1: (Int) -> Int = { i -> i + 1 }
         println("func1(5): ${func1(5)}")
         // An anonymous function
@@ -16,5 +16,7 @@ object SampleLambdaApp {
         // A bound callable reference
         val func4: () -> Int = "4"::toInt
         println("func4(): ${func4()}")
+        // If a lambda param is unused can use underscore (since 1.1)
+        // map.forEach { _, value -> println("$value!") }
     }
 }
