@@ -1,5 +1,9 @@
 package com.jjh.control
 
+/**
+ * Illustrates a Kotlin when statement - similar
+ * to case or switch statement in other languages.
+ */
 object WhenStatementExample {
     @JvmStatic
     fun main(args: Array<String>) {

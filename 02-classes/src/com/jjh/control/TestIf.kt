@@ -5,6 +5,7 @@ object TestIf {
     fun main(args: Array<String>) {
         val i = 5
         val j = 10
+        // Can have any number of if else and optional else
         if (i < j) {
             println(i)
         } else {
