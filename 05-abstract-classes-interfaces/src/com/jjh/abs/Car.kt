@@ -1,8 +1,14 @@
 package com.jjh.abs
 
 class Car : Conveyance() {
+
     override fun consumeFuel() {
-        fuel = fuel - 0.5
+        fuel -= 1.0
         println("consuming, ")
+    }
+
+    override fun drive(distance: Int): Boolean {
+        println("Driven $distance")
+        return true
     }
 }
