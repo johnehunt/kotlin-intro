@@ -1,15 +1,20 @@
 package com.jjh.anonymous
 
 object AnonymousInnerClassApp2 {
+
     @JvmStatic
     fun main(args: Array<String>) {
-        println("Starting...")
-        // Using an annonymous lambda
-        execute(Runnable { println("Running") })
-        println("Done")
+        // Creating an anonymous inner class by extending a class
+        // in this case its an abstract class but it doesn't need to be
+        val ship: GameObject = object : GameObject() {
+            override fun move(x: Int, y: Int): Boolean {
+                println("move($x, $y)")
+                return true
+            }
+        }
+
+        ship.move(4, 5);
+
     }
 
-    private fun execute(r: Runnable) {
-        r.run()
-    }
 }

@@ -4,13 +4,16 @@ object AnonymousInnerClassApp1 {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val r1: Runnable = object : Runnable {
+        // Creating an anonymous inner class from
+        // an interface - object indicates there is a single
+        // instance created and held in runnable
+        val runnable: Runnable = object : Runnable {
             override fun run() {
                 println("Running")
             }
         }
-        // Using an annonymous inner class
-        execute(r1)
+        // Using an anonymous inner class
+        execute(runnable)
         println("Done")
     }
 
