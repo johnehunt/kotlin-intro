@@ -37,16 +37,19 @@ object ApplyExampleApp {
             println(this)
         }
 
-        // Also similar to with but this is not bound
-        // instead it makes it available as a parameter
+        // Also similar to with but the object is not automatically bound
+        // to 'this' instead 'it' makes it available as a parameter
         user.also{ obj -> println(obj) }
         user.also{ println(it)}
 
-        // Use let to apply 1 or more operations on an object
+        // Use let to execute 1 or more operations on an object
         // returns a result
         val s = "Hello World"
         val s2 = s.let{s -> s.toUpperCase()}
-        val s3 = s.let{it.toUpperCase()}
+        val s3 = s.let{
+            println(it)
+            it.toUpperCase()
+        }
 
         // run useful when your lambda contains both the
         // object initialization and the computation of the
