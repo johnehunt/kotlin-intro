@@ -16,6 +16,9 @@ object SampleApp3 {
 //        d = s
 //        s = d
 
+        // Cast whatever is held in e to a Developer
+        // If e does not hold a reference to a Developer
+        // then a CLassCastException will be thrown
         d = e as Developer
     }
 }

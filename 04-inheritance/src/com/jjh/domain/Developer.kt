@@ -1,3 +1,3 @@
 package com.jjh.domain
 
-class Developer(n: String?, a: Int, id: Int) : PerminantEmployee(n!!, a, id)
+class Developer(name: String, age: Int, id: Int) : PerminantEmployee(name, age, id)

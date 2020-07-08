@@ -1,3 +1,3 @@
 package com.jjh.domain
 
-class IndustrialYearStudent(n: String, a: Int, id: Int) : TemporaryEmployee(n, a, id)
+class IndustrialYearStudent(name: String, age: Int, id: Int) : TemporaryEmployee(name, age, id)
