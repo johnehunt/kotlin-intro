@@ -6,6 +6,7 @@ object MapExampleApp {
         val map1: Map<Int, String> = mapOf(
                 1 to "John",
                 2 to "Denise")
+
         val map2 = mapOf(
                 1 to "John",
                 2 to "Denise")
