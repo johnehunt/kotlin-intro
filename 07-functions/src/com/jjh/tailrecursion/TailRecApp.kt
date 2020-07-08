@@ -15,7 +15,7 @@ tailrec fun factorialTailRec(acc: Int = 1, n: Int): Int {
         factorialTailRec(acc * n, n - 1) // Tail Recursive call
 }
 
-// Method isn't tail recusrive
+// Method isn't tail recursive
 fun bang(x: Int): Int  {
     return if (x == 0) throw RuntimeException("Bang!")
     else bang(x - 1) +1
