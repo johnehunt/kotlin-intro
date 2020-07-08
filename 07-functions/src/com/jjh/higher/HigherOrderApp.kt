@@ -8,10 +8,11 @@ object HigherOrderApp {
     @JvmStatic
     fun main(args: Array<String>) {
         println(processor(5, increment))
+        // Long hand form
         println(processor(5, { x -> x + 1 }))
-        // Trailing lambda syntax
+        // Trailing lambda syntax - preferred Kotlin style
         println(processor(5) { x -> x + 1 })
-        // it: implicit name fo a single parameter
+        // it: implicit name for a single parameter
         println(processor(5) { it + 1 })
     }
 

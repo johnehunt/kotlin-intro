@@ -11,7 +11,7 @@ fun printHello(): Unit {
     println("Hello")
 }
 
-fun printMessage(message: String): Unit {
+fun printMessage(message: String) {
     println(message)
 }
 
@@ -51,7 +51,7 @@ fun tripler(x: Int): Int = x * 3
 
 fun tripler2(x: Int) = x * 3
 
-// Inline functions - compiler inlines function
+// Inline functions - compiler tries to inline function
 inline fun calculate(): Int = 2 + 3
 
 
