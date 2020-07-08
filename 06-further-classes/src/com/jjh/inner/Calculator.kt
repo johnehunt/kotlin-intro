@@ -7,7 +7,7 @@ class Calculator(private val value: Int) {
     inner class Worker {
         fun calc() {
             for (i in 0 until value) {
-                result = result + i
+                result += i
             }
         }
     }

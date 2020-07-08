@@ -1,9 +1,11 @@
 package com.jjh.inner
 
 class CalculateFib {
+
     fun printFibSequence(number: Int) {
         val separator = ","
 
+        // Class defined within the scope of a member function
         class Fib {
             fun printFib(n: Int) {
                 var n1 = 0
