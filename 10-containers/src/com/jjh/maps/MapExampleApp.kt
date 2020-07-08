@@ -27,7 +27,9 @@ object MapExampleApp {
         println(map.values)
         println(map.isEmpty())
         println(map.get("UK")) // Return value for key or Null
+        println(map["UK"]) // Returns value for key or null
         println(map.get("USA"))
+        println(map["USA"])
         println(map.contains("UK"))
         println(map.getOrDefault("Germany", "Not known"))
 
