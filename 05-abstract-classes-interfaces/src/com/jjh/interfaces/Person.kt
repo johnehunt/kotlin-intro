@@ -5,3 +5,9 @@ class Person : Speaker {
         println("Person - Howdy")
     }
 }
+
+fun main(args: Array<String>) {
+    val p = Person()
+    p.sayHello()
+    p.saySomething()
+}

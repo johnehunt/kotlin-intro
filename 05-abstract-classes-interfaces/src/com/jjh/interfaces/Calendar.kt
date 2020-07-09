@@ -13,3 +13,10 @@ class Calendar : Organizer {
         return false
     }
 }
+
+fun main(args: Array<String>) {
+    val cal = Calendar()
+    cal.add("Dentist", "Monday")
+    val org: Organizer = cal
+    org.add("Garage", "Tuesday")
+}

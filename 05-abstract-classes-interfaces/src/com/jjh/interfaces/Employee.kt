@@ -9,3 +9,9 @@ class Employee : Speaker, Translator {
         super<Speaker>.sayHello()
     }
 }
+
+fun main(args: Array<String>) {
+    val e = Employee()
+    e.sayHello()
+    e.saySomething()
+}

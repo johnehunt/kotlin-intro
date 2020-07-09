@@ -23,12 +23,9 @@ object PrinterObject : Role {
 // delegated to TellerRole
 class User(name: String) : Role by TellerRole(name)
 
-object DelegationExampleApp {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val user = User("Player1")
-        user.printRole()
+fun main(args: Array<String>) {
+    val user = User("Player1")
+    user.printRole()
 
-        PrinterObject.printRole()
-    }
+    PrinterObject.printRole()
 }
