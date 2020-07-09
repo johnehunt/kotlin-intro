@@ -12,21 +12,18 @@ data class Counter(var value: Int) {
     }
 }
 
-object CounterApp {
-    @JvmStatic
-    fun main(args: Array<String>) {
+fun main(args: Array<String>) {
 
-        val c1 = Counter(1)
-        println(c1 + 2)
-        println(c1 - 2)
+    val c1 = Counter(1)
+    println(c1 + 2)
+    println(c1 - 2)
 
-        val c2 = Counter(5)
+    val c2 = Counter(5)
 
-        println(c1 + c2)
-        println(c1 - c2)
+    println(c1 + c2)
+    println(c1 - c2)
 
-        c2 += c1
-        println(c2)
+    c2 += c1
+    println(c2)
 
-    }
 }

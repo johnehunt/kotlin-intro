@@ -21,12 +21,9 @@ object SealedTypeDescripter {
     }
 }
 
-object SealedClassTradeApp {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        println(describe(EquityTrade("IBM")))
-        println(describe(FxTrade("GBP", "USD")))
-        println(describe(InterestRateSwap(5.0, 3.4)))
-        println(describe(Swaption("Bermudan")))
-    }
+fun main(args: Array<String>) {
+    println(describe(EquityTrade("IBM")))
+    println(describe(FxTrade("GBP", "USD")))
+    println(describe(InterestRateSwap(5.0, 3.4)))
+    println(describe(Swaption("Bermudan")))
 }

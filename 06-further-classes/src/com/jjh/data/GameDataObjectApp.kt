@@ -1,31 +1,28 @@
 package com.jjh.data
 
-object GameDataObjectApp {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val obj1 = GameObject(10.0, 10.0)
-        println(obj1)
-        val obj2 = GameObject(10.0, 10.0)
-        println(obj1 == obj2)
-        println(obj1.hashCode())
+fun main(args: Array<String>) {
+    val obj1 = GameObject(10.0, 10.0)
+    println(obj1)
+    val obj2 = GameObject(10.0, 10.0)
+    println(obj1 == obj2)
+    println(obj1.hashCode())
 
-        println("-------")
+    println("-------")
 
-        val ship = Ship(10.0, 10.0)
-        println(ship)
-        println(ship.image)
+    val ship = Ship(10.0, 10.0)
+    println(ship)
+    println(ship.image)
 
-        println("------")
-        // copying
+    println("------")
+    // copying
 
-        val otherShip = ship.copy(x = 20.0)
-        println(otherShip)
+    val otherShip = ship.copy(x = 20.0)
+    println(otherShip)
 
-        // Data classes can be destructured
-        val (x, y) = otherShip
-        println("x $x, y $y")
+    // Data classes can be destructured
+    val (x, y) = otherShip
+    println("x $x, y $y")
 
-        val (a, b) = ship
-        println("a $a, b $b")
-    }
+    val (a, b) = ship
+    println("a $a, b $b")
 }
