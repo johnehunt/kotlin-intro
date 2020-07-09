@@ -19,5 +19,4 @@ object GameUtil {
     // GameUtil.count = 0
     // GameUtil.count = null
     var count: Int? = null
-
 }

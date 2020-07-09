@@ -1,7 +1,5 @@
 package com.jjh.props
 
-import kotlin.concurrent.fixedRateTimer
-
 /**
  * Illustrates use of properties and their types:
  * <visibility> [modifiers] val propertyName: PropertyType = initial_value
