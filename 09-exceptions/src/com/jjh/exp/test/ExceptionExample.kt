@@ -43,11 +43,10 @@ class ExceptionExample {
         BufferedReader(FileReader(filename)).use { br -> return br.readLine() }
     }
 
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            val ee = ExceptionExample()
-            ee.save("temp.txt")
-        }
-    }
+}
+
+// Run the application
+fun main(args: Array<String>) {
+    val ee = ExceptionExample()
+    ee.save("temp.txt")
 }
