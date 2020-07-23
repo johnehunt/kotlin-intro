@@ -1,10 +1,8 @@
 package com.jjh.react
 
-
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.kotlin.toFlowable
 import io.reactivex.rxjava3.kotlin.toObservable
-import rx.observables.MathObservable
 
 fun main(args: Array<String>) {
     val list = listOf("John", "Denise", "Phoebe", "Gryff", "Adam", "Jasmine")
