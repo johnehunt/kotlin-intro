@@ -1,7 +1,7 @@
-package com.jjh.domain
+package com.jjh.people
 
-fun main(args: Array<String>) {
-    val p1 = Person("John Hunt", 55)
+fun main() {
+    val p1 = Person6("John Hunt", 55)
     println(p1)
     p1.birthday()
     p1.printDetails()

@@ -2,18 +2,7 @@ package com.jjh.people
 
 class Person5(val name: String, var age: Int)  {
 
-    init {
-        increment()
-    }
-
-    companion object {
-        var count: Int = 0
-        fun increment() {
-            count++
-        }
-        fun printInstanceCount() {
-            println("$count instances have been created")
-        }
-    }
+    // Provides a default way to convert instance to a string
+    override fun toString()= "Person5(name='$name', age=$age)"
 
 }

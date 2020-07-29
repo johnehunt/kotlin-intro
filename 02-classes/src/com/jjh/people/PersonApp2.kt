@@ -1,6 +1,6 @@
 package com.jjh.people
 
-fun main(args: Array<String>) {
+fun main() {
 
     // Can use named parameters
     val p1 = Person(name = "John", age = 54)

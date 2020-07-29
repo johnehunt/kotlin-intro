@@ -12,3 +12,13 @@ package com.jjh.people
  */
 class Person constructor(val name: String, // readonly property
                          var age: Int ) { }
+
+
+class Person1 (val name: String = "", val age: Int = 0)
+
+fun main() {
+    val p1 = Person1("John", 55)
+    val p2 = Person1("John")
+    val p3 = Person1()
+    val p4 = Person1(age = 21)
+}

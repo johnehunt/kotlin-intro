@@ -1,6 +1,6 @@
 package com.jjh.people
 
-fun main(args: Array<String>) {
+fun main() {
     val p1 = Person4("John")
     println("${p1.name} has partner ${p1.partner}")
     val p2 = Person4("Denise")

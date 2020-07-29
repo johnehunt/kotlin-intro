@@ -1,6 +1,6 @@
-package com.jjh.domain
+package com.jjh.people
 
-class Person constructor(val name: String, // readonly property
+class Person6 constructor(val name: String, // readonly property
                          var age: Int // read-write property
                          ) {
 
@@ -33,12 +33,11 @@ class Person constructor(val name: String, // readonly property
     fun getFirstname(): String {
         var result = ""
         val spacePosition = name.indexOf(" ")
-        if (spacePosition > 0) {
-            result = name.substring(0, spacePosition)
+        return if (spacePosition > 0) {
+            name.substring(0, spacePosition)
         } else {
-            result = name
+            name
         }
-        return result
     }
 
     /**
