@@ -16,4 +16,14 @@ fun main() {
     println("------------")
 
     for (x in 0 until 9 step 2) print("$x, ") // Prints 0, 2, 4, 6, 8
+
+    println("------------")
+
+    for (i in 0..5) {
+        for (j in 5 downTo 0) {
+            print("$i * $j = ${i*j}; ")
+        }
+        println()
+    }
+
 }
