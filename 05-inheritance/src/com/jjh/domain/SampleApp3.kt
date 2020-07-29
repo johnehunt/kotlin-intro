@@ -1,6 +1,6 @@
 package com.jjh.domain
 
-fun main(args: Array<String>) {
+fun main() {
     var e: Employee = Employee("John", 55, 1234)
     var d: Developer = Developer("Eloise", 25, 5432)
     val s = Sales("Adam", 20, 3456)
