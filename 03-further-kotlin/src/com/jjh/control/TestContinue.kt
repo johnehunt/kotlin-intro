@@ -1,12 +1,11 @@
 package com.jjh.control
 
-
-fun main(args: Array<String>) {
+fun main() {
     for (i in 0..4) {
         for (j in 0..4) {
             val result = i + j
             if (result == 6) continue
-            println("$i, $j = $result")
+            print("$i, $j = $result; ")
         }
     }
 
@@ -16,7 +15,7 @@ fun main(args: Array<String>) {
         for (j in 1..4) {
             val result = i + j
             if (result == 6) continue@outer
-            println("$i, $j = $result")
+            print("$i, $j = $result; ")
         }
     }
 }
