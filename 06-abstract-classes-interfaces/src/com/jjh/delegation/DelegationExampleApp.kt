@@ -19,7 +19,7 @@ object PrinterObject : Role {
 }
 
 // Implements the delegation design pattern
-// All implements of the Role interface methods are automatically
+// All implementations of the Role interface methods are automatically
 // delegated to TellerRole
 class User(name: String) : Role by TellerRole(name)
 
