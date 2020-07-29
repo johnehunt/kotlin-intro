@@ -1,11 +1,14 @@
 package com.jjh.control
 
-fun main(args: Array<String>) {
+fun main() {
     println("Starting")
-    for (i in 0..9) {
-        for (j in 10 downTo 1) {
-            println(i.toString() + "\t" + j)
+
+    for (i in 0..5) {
+        for (j in 5 downTo 0) {
+            print("$i * $j = ${i*j}; ")
         }
+        println()
     }
+
     println("Done")
 }
