@@ -1,26 +1,36 @@
 package com.jjh.lambdas
 
-object SampleLambdaApp {
+fun main() {
 
-    @JvmStatic
-    fun main(args: Array<String>) {
-        // Lambda expression - last expression implicitly returned
-        val func1: (Int) -> Int = { i -> i + 1 }
-        println("func1(5): ${func1(5)}")
+    var increase: (Int) -> Int = {x -> x + 1}
+    println("increase: $increase")
+    println("increase(5): ${increase(5)}")
 
-        // An anonymous function
-        val func2 = fun(i: Int): Int {return i + 1}
-        println("func2(5): ${func2(5)}")
+    val increment = increase
+    println("increase using increment:  ${increment(2)}")
 
-        // A callable reference to a member function
-        val func3: (String) -> Int = String::toInt
-        println("funcs('3'): ${func3("3")}")
+    increase = {x -> x + 99}
+    val y = increase(10)
+    println("2nd Increased y: $y")
 
-        // A bound callable reference
-        val func4: () -> Int = "4"::toInt
-        println("func4(): ${func4()}")
+    // An anonymous function
+    val func1 = fun(i: Int): Int { return i + 1 }
+    println("func1(5): ${func1(5)}")
+    val func1a = fun(i: Int) = i + 1
+    println("func2a(5): ${func1a(5)}")
 
-        // If a lambda param is unused can use underscore (since 1.1)
-        // map.forEach { _, value -> println("$value!") }
-    }
+    // Lambda expression - last expression implicitly returned
+    val func2: (Int) -> Int = { i -> i + 1 }
+    println("func2(5): ${func2(5)}")
+
+    // A callable reference to a method on class String
+    val func3: (String) -> Int = String::toInt
+    println("funcs('3'): ${func3("3")}")
+
+    // A bound callable reference
+    val func4: () -> Int = "4"::toInt
+    println("func4(): ${func4()}")
+
+    // If a lambda param is unused can use underscore (since 1.1)
+    // map.forEach { _, value -> println("$value!") }
 }

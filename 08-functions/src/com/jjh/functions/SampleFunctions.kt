@@ -11,12 +11,12 @@ fun printHello(): Unit {
     println("Hello")
 }
 
-fun printMessage(message: String) {
-    println(message)
-}
-
 fun printHello2() {
     println("Hello")
+}
+
+fun printMessage(message: String) {
+    println(message)
 }
 
 // Functions returning a value
