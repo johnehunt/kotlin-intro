@@ -2,10 +2,10 @@ package com.jjh.extensions
 
 fun main() {
     val s = "John"
-    println(s.hasLength(4))
+    println("s.hasLength(4): ${s.hasLength(4)}")
     println("-".mult(25))
 
-    println(s.size)
+    println("s.size: ${s.size}")
 
     val obj = MyClass()
     obj.printMe("Hello")

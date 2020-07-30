@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
 
     // Loop through each element in the list
     myList.forEach { s -> println(s) }
+    myList.forEach { println(it) }
     myList.forEachIndexed { i, s -> println("index: $i value: $s") }
 
     println(myList)
