@@ -1,6 +1,6 @@
 package com.jjh.sealed
 
-import com.jjh.sealed.SealedTypeDescripter.describe
+import com.jjh.sealed.TypeDescripter.describe
 
 abstract sealed class Trade
 
@@ -9,7 +9,7 @@ data class FxTrade(val currency1: String, val currency2: String) : Trade()
 data class InterestRateSwap(val fixedRate: Double, val floatingRate: Double) : Trade()
 data class Swaption(val data: String) : Trade()
 
-object SealedTypeDescripter {
+object TypeDescripter {
     fun describe(x: Trade): String {
         return when (x) {
             is EquityTrade -> "EquityTrade"
@@ -21,7 +21,7 @@ object SealedTypeDescripter {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(describe(EquityTrade("IBM")))
     println(describe(FxTrade("GBP", "USD")))
     println(describe(InterestRateSwap(5.0, 3.4)))
