@@ -11,8 +11,8 @@ object ClosureSampleApp2 {
         println(increment(5))
     }
 
-    fun resetFunc() {
-        // Local variable is bound and stored on the heap
+    private fun resetFunc() {
+        // Local val is bound and stored in function
         // as it is used within the function body
         val addition = 50
         increment = { a ->  a + addition }
