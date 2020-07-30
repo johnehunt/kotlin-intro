@@ -1,8 +1,8 @@
 package com.jjh.data
 
-//open class  GameObject
-//
-//data class GamePiece(val x: Double, val y: Double): GameObject()
+open class  GameEntity
+
+data class GamePiece(val x: Double, val y: Double): GameEntity()
 
 /**
  * Data class gets
@@ -14,10 +14,11 @@ package com.jjh.data
  * extend a data class (since Kotlin 1.1)
  * But in general avoid inheritance with data classes
  */
-data class GameObject(val x: Double, val y: Double)
+data class GameObject(val x: Double, val y: Double) : Cloneable
 
 data class Ship(val x: Double, val y: Double) {
     // following property is not used by toString, equals, hashcode etc.
     val image: String = "ship.png"
 }
+
 

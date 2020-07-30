@@ -1,9 +1,10 @@
 package com.jjh.data
 
-fun main(args: Array<String>) {
+fun main() {
     val obj1 = GameObject(10.0, 10.0)
     println(obj1)
     val obj2 = GameObject(10.0, 10.0)
+    println(obj2)
     println(obj1 == obj2)
     println(obj1.hashCode())
 
@@ -16,13 +17,17 @@ fun main(args: Array<String>) {
     println("------")
     // copying
 
+    println(ship)
     val otherShip = ship.copy(x = 20.0)
     println(otherShip)
 
+    println("------")
+
     // Data classes can be destructured
-    val (x, y) = otherShip
+    val (x, y) = ship
     println("x $x, y $y")
 
-    val (a, b) = ship
+    val (a, b) = otherShip
     println("a $a, b $b")
+
 }
