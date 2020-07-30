@@ -12,18 +12,17 @@ data class Counter(var value: Int) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
 
     val c1 = Counter(1)
-    println(c1 + 2)
-    println(c1 - 2)
+    println("c1 + 2: ${c1 + 2}")
+    println("c1 - 2: ${c1 - 2}")
 
     val c2 = Counter(5)
-
-    println(c1 + c2)
-    println(c1 - c2)
+    println("c1 + c2: ${c1 + c2}")
+    println("c1 - c2: ${c1 - c2}")
 
     c2 += c1
-    println(c2)
+    println("c2 += c1: $c2")
 
 }
