@@ -1,7 +1,7 @@
 package com.jjh.anonymous
 
 
-fun main(args: Array<String>) {
+fun main() {
     // Creating an anonymous inner class by extending a class
     // in this case its an abstract class but it doesn't need to be
     val ship: GameObject = object : GameObject() {
@@ -10,8 +10,7 @@ fun main(args: Array<String>) {
             return true
         }
     }
-
-    ship.move(4, 5);
+    ship.move(4, 5)
 
 }
 

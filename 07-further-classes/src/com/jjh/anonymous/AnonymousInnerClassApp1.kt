@@ -1,9 +1,12 @@
 package com.jjh.anonymous
 
-object AnonymousInnerClassApp1 {
+object Executor {
+    fun execute(r: Runnable) {
+        r.run()
+    }
+}
 
-    @JvmStatic
-    fun main(args: Array<String>) {
+fun main() {
         // Creating an anonymous inner class from
         // an interface - object indicates there is a single
         // instance created and held in runnable
@@ -13,12 +16,6 @@ object AnonymousInnerClassApp1 {
             }
         }
         // Using an anonymous inner class
-        execute(runnable)
+        Executor.execute(runnable)
         println("Done")
-    }
-
-    private fun execute(r: Runnable) {
-        r.run()
-    }
-
 }
