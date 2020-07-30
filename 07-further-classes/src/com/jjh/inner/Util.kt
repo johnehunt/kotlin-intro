@@ -9,12 +9,12 @@ class Util {
         }
     }
 
-    // Top level interface defined wihtin the scope of the Util namespace
+    // Top level interface defined within the scope of the Util namespace
     interface Printable {
         fun convert(): String?
     }
 
-    // Abstract top level class defined wihtin the scope of the Util namespace
+    // Abstract top level class defined within the scope of the Util namespace
     abstract class DefaultPrintable : Printable {
         abstract val name: String?
     }
