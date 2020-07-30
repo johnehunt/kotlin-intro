@@ -1,21 +1,40 @@
 package com.jjh.interfaces
 
-class Calendar : Organizer {
-    override fun add(appointment: String?, date: String?) {
+class Calendar(override val owner: String) : Organizer {
+    override fun add(appointment: String, date: String) {
         println("$appointment - $date")
     }
 
-    override operator fun get(date: String?): String? {
+    override fun get(date: String): String? {
         return null
     }
 
-    override fun remove(date: String?): Boolean {
+    override fun remove(date: String): Boolean {
         return false
     }
 }
 
-fun main(args: Array<String>) {
-    val cal = Calendar()
+object Diary : Organizer {
+    override val owner: String
+        get() = "John"
+
+    override fun add(appointment: String, date: String) {
+        println("add")
+    }
+
+    override fun get(date: String): String? {
+        println("get")
+        return null
+    }
+
+    override fun remove(date: String): Boolean {
+        println("remove")
+        return false
+    }
+}
+
+fun main() {
+    val cal = Calendar("John")
     cal.add("Dentist", "Monday")
     val org: Organizer = cal
     org.add("Garage", "Tuesday")

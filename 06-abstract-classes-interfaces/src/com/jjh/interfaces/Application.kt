@@ -1,14 +1,14 @@
 package com.jjh.interfaces
 
-class Application : Cloneable, Organizer, Printer, Speaker {
+class Application(override val owner: String) : Cloneable,
+        Organizer,
+        Printer,
+        Speaker {
+
     override fun saySomething() {}
     override fun prettyPrint() {}
-    override fun add(appointment: String?, date: String?) {}
-    override operator fun get(date: String?): String? {
-        return null
-    }
+    override fun add(appointment: String, date: String) {}
+    override fun get(date: String): String? = null
+    override fun remove(date: String): Boolean = false
 
-    override fun remove(date: String?): Boolean {
-        return false
-    }
 }

@@ -6,7 +6,7 @@ class Person : Speaker {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val p = Person()
     p.sayHello()
     p.saySomething()

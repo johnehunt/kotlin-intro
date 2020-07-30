@@ -10,7 +10,7 @@ class Employee : Speaker, Translator {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val e = Employee()
     e.sayHello()
     e.saySomething()

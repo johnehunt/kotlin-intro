@@ -1,5 +1,11 @@
 package com.jjh.interfaces
 
-interface Workers
-interface Employers
-interface Records : Workers, Employers, Cloneable
+interface Workers {
+    fun doWork()
+}
+interface Employers {
+    fun printSelf()
+}
+interface Records : Workers, Employers, Cloneable {
+    fun doSomething()
+}
