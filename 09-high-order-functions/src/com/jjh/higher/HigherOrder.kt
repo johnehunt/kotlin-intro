@@ -1,22 +1,9 @@
 package com.jjh.higher
 
-object Math {
-    fun processor(x: Double, y: Double, func: (Double, Double) -> Double): Double {
-        return func(x, y)
-    }
-
-    fun processor(x: Int, func: (Int) -> String): String {
-        return func(x)
-    }
-}
-
-
-typealias IntFunction = (Int) -> Int
-
-object HigherOrder2 {
+object HigherOrder {
 
     // Takes a function and an int
-    val processor: (Int, IntFunction) -> Int = {x, func -> func(x)}
+    val processor: (Int, (Int) -> Int) -> Int = {x, func -> func(x)}
 
 }
 
