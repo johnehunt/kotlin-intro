@@ -19,3 +19,7 @@ bin-release/
 *.iml
 *.class
 /out
+/04-further-properties/.gradle/
+/04-further-properties/gradle/wrapper/
+/04-further-properties/gradlew
+/04-further-properties/gradlew.bat
