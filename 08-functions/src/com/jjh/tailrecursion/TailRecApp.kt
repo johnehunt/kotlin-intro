@@ -16,9 +16,9 @@ tailrec fun factorialTailRec(acc: Int = 1, n: Int): Int {
 }
 
 // Method isn't tail recursive
-fun bang(x: Int): Int  {
+fun bang(x: Int): Int {
     return if (x == 0) throw RuntimeException("Bang!")
-    else bang(x - 1) +1
+    else bang(x - 1) + 1
 }
 
 tailrec fun bangTailRec(x: Int): Int {
@@ -28,12 +28,21 @@ tailrec fun bangTailRec(x: Int): Int {
         bangTailRec(x - 1)
 }
 
-object TailRecApp {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        println(factorial(5))
-        println(factorialTailRec(n = 5))
-        // println(bang(4))
-        // println(bangTailRec(4))
+class Processor {
+     tailrec fun bangTailRecMethod(x: Int): Int {
+        return if (x == 0)
+            throw Exception("Bang!")
+        else
+            bangTailRecMethod(x - 1)
     }
 }
+
+fun main(args: Array<String>) {
+    println(factorial(5))
+    println(factorialTailRec(n = 5))
+    // println(bang(4))
+    // println(bangTailRec(4))
+    val processor = Processor()
+    processor.bangTailRecMethod(4)
+}
+
