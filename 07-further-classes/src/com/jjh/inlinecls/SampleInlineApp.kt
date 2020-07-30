@@ -8,7 +8,7 @@ package com.jjh.inlinecls
  * inline class properties cannot have backing fields
  * inline classes can only have simple computable properties (no lateinit/delegated properties)
  *
- * Inline classes are available only since Kotlin 1.3 and currently are experimental.
+ * Inline classes are available only since Kotlin 1.3 and currently experimental.
  */
 inline class Name(val s: String) {
     val length: Int
