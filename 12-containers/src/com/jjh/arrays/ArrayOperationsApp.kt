@@ -1,6 +1,6 @@
 package com.jjh.arrays
 
-fun main(args: Array<String>) {
+fun main() {
     val names = arrayOf("John", "Denise", "Adam", "Phoebe")
     println("first(): ${names.first()}")
     println("last(): ${names.last()}")
