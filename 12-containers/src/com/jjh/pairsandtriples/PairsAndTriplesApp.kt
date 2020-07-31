@@ -1,6 +1,6 @@
 package com.jjh.pairsandtriples
 
-fun main(args: Array<String>) {
+fun main() {
     val pair1 = Pair<Int, String>(1, "John")
     val pair2 = Pair(2, "Denise")
     val pair3 = Pair("Adam", "Jasmine")
@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     println(pair3)
 
     println(pair1.first)
-    println(pair2.second)
+    println(pair1.second)
 
     println(pair1.copy(first = 3))
     println(pair1)

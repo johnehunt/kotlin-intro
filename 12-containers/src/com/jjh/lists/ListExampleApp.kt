@@ -1,6 +1,6 @@
 package com.jjh.lists
 
-fun main(args: Array<String>) {
+fun main() {
 
     // List creation options
     val myList0: List<String> = ArrayList()
@@ -11,8 +11,9 @@ fun main(args: Array<String>) {
 
     val myList2 = listOf<String>("One", "Two", "Three")
     val myList3 = listOf("One", "Two", "Three")
-
     println("myList2: $myList2")
+    println("myList3: $myList3")
+
     println("myList2.siz: ${myList2.size}")
     println("myList2.first(): ${myList2.first()}")
     println("myList2.last(): ${myList2.last()}")

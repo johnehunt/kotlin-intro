@@ -1,6 +1,6 @@
 package com.jjh.maps
 
-fun main(args: Array<String>) {
+fun main() {
     val map1: Map<Int, String> = mapOf(
             1 to "John",
             2 to "Denise")
@@ -19,22 +19,35 @@ fun main(args: Array<String>) {
     println(map2)
     println(map)
 
+    println("---------")
+
     println(map.size)
     println(map.keys)
     println(map.values)
     println(map.isEmpty())
-    println(map.get("UK")) // Return value for key or Null
-    println(map["UK"]) // Returns value for key or null
+    println(map.get("UK")) // Returns value for key or Null
+    println(map["UK"]) // Returns value for key or null (more common)
     println(map.get("USA"))
     println(map["USA"])
     println(map.contains("UK"))
     println(map.getOrDefault("Germany", "Not known"))
 
-    map.put("Germany", "Berlin")
+    // Mutable map operations
+    map.put("Italy", "Rome")
+    map["Germany"] = "Berlin" // more common format
     println(map)
 
-    for (key in map.keys) {
-        println("key: $key - value: ${map.get(key)}")
-    }
+    println("---------")
 
+    for (key in map.keys) {
+        print("$key -> ${map.get(key)}, ")
+    }
+    println()
+
+    for (value in map.values) {
+        print("$value, ")
+    }
+    println()
+
+    map.forEach { (k, v) -> print("$k -> $v, ") }
 }
