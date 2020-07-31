@@ -4,11 +4,9 @@ import com.jjh.exp.config.ConfigFileException
 import java.io.BufferedReader
 import java.io.FileNotFoundException
 import java.io.FileReader
-import java.io.IOException
 
 class ExceptionExample {
 
-    @Throws(ConfigFileException::class)
     fun save(filename: String) {
         println("Entering save() method")
         try {
@@ -19,6 +17,7 @@ class ExceptionExample {
             e.printStackTrace()
         } catch (exp: FileNotFoundException) {
             exp.printStackTrace()
+            throw ConfigFileException(123, "No Config", exp)
         } catch (exp: Exception) {
             exp.printStackTrace()
         } finally {
