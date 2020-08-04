@@ -24,4 +24,11 @@ fun main(args: Array<String>) {
     }
     println("result: $result")
 
+    var x: Any = 32
+    when (x) {
+        is Int -> println("Its a number")
+        is String -> println("Its a String")
+        else -> println("its something else")
+    }
+
 }
