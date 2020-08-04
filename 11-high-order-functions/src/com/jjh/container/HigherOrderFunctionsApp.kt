@@ -20,6 +20,9 @@ fun main() {
     val numbers3 = numbers.filter { i -> i > 2 }
     println(numbers3)
 
+    // Can combine two HoF together
+    numbers.filter { i -> i > 2 }.forEach { println(it) }
+
     println("------")
 
     println(myList)
