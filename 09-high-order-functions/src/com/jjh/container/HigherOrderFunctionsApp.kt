@@ -1,4 +1,4 @@
-package com.jjh.higherorder
+package com.jjh.container
 
 data class Trade(val id: Int, val equity: String, val amount: Int)
 
