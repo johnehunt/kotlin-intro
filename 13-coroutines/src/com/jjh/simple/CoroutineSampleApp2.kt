@@ -6,7 +6,7 @@ import kotlinx.coroutines.launch
 
 suspend fun executeSlowTask() {
         println("Starting Task")
-        delay(5000)
+        delay(5000) // simulates a long running task
         println("Done Task")
 }
 
