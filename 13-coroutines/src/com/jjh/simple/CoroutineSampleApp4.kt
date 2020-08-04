@@ -16,15 +16,15 @@ suspend fun performTasks() {
     performTask3()
 }
 
-suspend fun performTask1() {
+fun performTask1() {
     println("Task 1: ${Thread.currentThread().name}")
 }
 
-suspend fun performTask2() {
+fun performTask2() {
     println("Task 2: ${Thread.currentThread().name}")
 }
 
-suspend fun performTask3() {
+fun performTask3() {
     println("Task 3: ${Thread.currentThread().name}")
 }
 
