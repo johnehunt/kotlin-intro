@@ -37,7 +37,7 @@ class Processor {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(factorial(5))
     println(factorialTailRec(n = 5))
     // println(bang(4))

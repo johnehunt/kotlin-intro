@@ -6,7 +6,7 @@ class Calculator {
         return if (x > y) x else y
     }
 
-    // Function defined in class
+    // Function defined in class
     val increment: (Int) -> Int = { x -> x + 1 }
 }
 
