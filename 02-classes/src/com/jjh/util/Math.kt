@@ -2,8 +2,6 @@ package com.jjh.util
 
 class Math {
 
-
-
     fun max(x: Int, y: Int): Int {
         return if (x > y) {
             x
@@ -16,7 +14,7 @@ class Math {
 
     fun add(x: Int, y: Int = 1): Int = x + y
 
-    fun print():Unit {
+    fun print(): Unit {
         println("math")
     }
 
@@ -28,9 +26,12 @@ class Math {
 
     fun negate2(value: Int) = -value
 
-    fun printer1(i : Int): Unit { println(i) }
-    fun printer2(i : Int): Unit = println(i)
-    fun printer3(i : Int) = println(i)
+    fun printer1(i: Int): Unit {
+        println(i)
+    }
+
+    fun printer2(i: Int): Unit = println(i)
+    fun printer3(i: Int) = println(i)
 
 
 }
@@ -38,8 +39,8 @@ class Math {
 fun main() {
     val math = Math()
 
-    println("math.max(3, 4): "     + math.max(3, 4))
-    println("math.max(3, y=4): "   + math.max(3, y = 4))
+    println("math.max(3, 4): " + math.max(3, 4))
+    println("math.max(3, y=4): " + math.max(3, y = 4))
     println("math.max(x=3, y=4): " + math.max(x = 3, y = 4))
     println("math.max(y=3, x=4): " + math.max(y = 3, x = 4))
 

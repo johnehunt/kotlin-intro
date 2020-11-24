@@ -1,8 +1,8 @@
 package com.jjh.people
 
 class Person6 constructor(val name: String, // readonly property
-                         var age: Int // read-write property
-                         ) {
+                          var age: Int // read-write property
+) {
 
     fun birthday() {
         val oldAge = age

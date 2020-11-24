@@ -7,7 +7,8 @@ class Book(val title: String, val author: String, var price: Double) {
         price = this.price - discountAmount
         return price
     }
-    fun printMe(): Unit =  println("Book($title, $author, $price)")
+
+    fun printMe(): Unit = println("Book($title, $author, $price)")
 
     fun updatePrice(price: Double) {
         if (price > 0.0) {
