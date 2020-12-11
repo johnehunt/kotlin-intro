@@ -1,4 +1,4 @@
-package overriding
+package com.jjh.overriding
 
 open class Base {
     open val label: String = "Base"

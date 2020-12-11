@@ -1,4 +1,4 @@
-package overriding
+package com.jjh.overriding
 
 open class Cat {
     open val dangerous = false

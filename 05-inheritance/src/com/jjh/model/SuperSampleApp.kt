@@ -1,4 +1,4 @@
-package model
+package com.jjh.model
 
 open class Base {
     open fun print(): Unit = println("Base")
