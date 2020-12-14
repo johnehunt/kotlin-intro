@@ -11,6 +11,7 @@ object HelloWorldApp {
     @JvmStatic
     fun main(args: Array<String>) {
         println("Hello World!")
+        println(KotlinVersion.CURRENT) // Check version of Kotlin being run
     }
 
 }
