@@ -45,7 +45,7 @@ fun main() {
     println("math.max(y=3, x=4): " + math.max(y = 3, x = 4))
 
     // Can't use positional after named
-    // println("math.max(x=3, 4): "     + math.max(x=3, 4))
+    // println("math.max(x=3, 4): "     + math.max(x=3, 4)) // valid in kotlin 1.4
     // invalid as positional param is assumed to be x
     // println("math.max(4, x=3): " + math.max(4, x=3))
 
