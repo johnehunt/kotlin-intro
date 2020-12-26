@@ -20,3 +20,7 @@ bin-release/
 *.class
 /out
 
+/.idea/
+/lib/
+/build
+/.gradle
