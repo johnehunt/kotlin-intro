@@ -20,16 +20,19 @@ class CalculatorTest {
     }
 
     @Test
+    @Order(1)
     fun testWhenAdding1and3ThenAnswerIs4() {
         Assertions.assertEquals(4, calculator.add(1, 3))
     }
 
     @Test
+    @Order(2)
     fun `Adding 1 and 0 should be equal to 0`() {
         Assertions.assertEquals(1, calculator.add(1, 0))
     }
 
     @Test
+    @Order(3)
     fun testDivide22by7By() {
         val myPi = calculator.div(22.0, 7.0)
         println(myPi)
