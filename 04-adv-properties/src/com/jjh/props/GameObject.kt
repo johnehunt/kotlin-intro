@@ -11,13 +11,13 @@ class GameObject {
             }
         }
 
-    var y: Int
+    var y: Int = 0
         get() {
-            return y
+            return field
         }
         set(value) {
             if (value >= 0) {
-                y = value
+                field = value
             }
         }
 
