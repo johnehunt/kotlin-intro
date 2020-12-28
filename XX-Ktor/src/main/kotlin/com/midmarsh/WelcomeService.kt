@@ -4,21 +4,10 @@ import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.jackson.*
-
-import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 import io.ktor.routing.*
-import io.ktor.http.*
-import com.fasterxml.jackson.databind.*
-import io.ktor.jackson.*
-import io.ktor.features.*
-import io.ktor.client.*
-import io.ktor.client.features.json.*
-import io.ktor.client.request.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import kotlinx.coroutines.*
 
 fun main() {
     embeddedServer(Netty, 8080) {
@@ -48,6 +37,5 @@ fun main() {
         println("\t http://0.0.0.0:8080/hello")
 
     }.start(wait = true)
-
-
+    
 }
