@@ -1,4 +1,4 @@
-package com.midmarsh
+package com.midmarsh.util
 
 import org.junit.jupiter.api.*
 
