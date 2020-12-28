@@ -4,6 +4,9 @@ import org.junit.jupiter.api.*
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.function.Executable
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
 
 class CalculatorTest {
 
@@ -40,6 +43,7 @@ class CalculatorTest {
     }
 
     @Test
+    @Order(5)
     fun `Dividing by zero should throw the DivideByZeroException`() {
         val exception = Assertions.assertThrows(DivideByZeroException::class.java) {
             calculator.div(5.0, 0.0)
@@ -49,7 +53,8 @@ class CalculatorTest {
     }
 
     @Test
-    fun `The square of a number should be equal to that number multiplied in itself`() {
+    @Order(4)
+    fun `The result of adding two numbers should be equal to their total`() {
         Assertions.assertAll(
                 Executable { assertEquals(0, calculator.add(0, 0)) },
                 Executable { Assertions.assertEquals(1, calculator.add(0, 1)) },
@@ -63,5 +68,26 @@ class CalculatorTest {
         // not executed
     }
 
+    @ParameterizedTest
+    @MethodSource("valuesProvider")
+    fun testWithValueSource(x: Int, y: Int, total: Int) {
+        val calc: Calculator = Calculator()
+        val result = calc.add(x, y)
+        assertEquals(total, result, "result $result should be $total")
+    }
+
+    companion object {
+        @JvmStatic
+        fun valuesProvider() = listOf(Arguments.of(1, 1, 2), Arguments.of(1, 2, 3))
+    }
+
+    private val testData = listOf(Triple(1, 1, 2), Triple(1, 2, 3))
+
+    @TestFactory
+    fun testWithTestFactoryData() = testData.map{ (x, y, result) ->
+        DynamicTest.dynamicTest("when I add $x and $y then I get $result") {
+            Assertions.assertEquals(result, calculator.add(x, y))
+        }
+    }
 
 }
