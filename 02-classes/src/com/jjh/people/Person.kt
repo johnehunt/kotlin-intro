@@ -11,7 +11,7 @@ package com.jjh.people
  * Note {} for class body are optional here as there is no class body
  */
 class Person constructor(val name: String, // readonly property
-                         var age: Int) {}
+                         var age: Int)
 
 
 class Person1(val name: String = "", val age: Int = 0)

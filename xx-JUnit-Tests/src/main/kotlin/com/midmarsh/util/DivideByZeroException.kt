@@ -1,4 +1,3 @@
 package com.midmarsh.util
 
-class DivideByZeroException(val numerator: Double) : RuntimeException() {
-}
+class DivideByZeroException(val numerator: Double) : RuntimeException()

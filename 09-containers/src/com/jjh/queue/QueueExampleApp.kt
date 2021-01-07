@@ -1,10 +1,9 @@
 package com.jjh.queue
 
-import java.util.*
 import kotlin.collections.*
 
 fun main() {
-    val numbers = ArrayDeque<Int>(listOf(1, 2, 3))
+    val numbers = ArrayDeque(listOf(1, 2, 3))
     println(numbers)
 
     val names = ArrayDeque<String>(5)

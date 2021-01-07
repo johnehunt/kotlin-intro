@@ -1,4 +1,3 @@
 package com.jjh.top
 
-class Calculator {
-}
+class Calculator

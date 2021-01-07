@@ -25,13 +25,13 @@ class CalculatorTest {
     @Test
     @Order(1)
     fun testWhenAdding1and3ThenAnswerIs4() {
-        Assertions.assertEquals(4, calculator.add(1, 3))
+        assertEquals(4, calculator.add(1, 3))
     }
 
     @Test
     @Order(2)
     fun `Adding 1 and 0 should be equal to 0`() {
-        Assertions.assertEquals(1, calculator.add(1, 0))
+        assertEquals(1, calculator.add(1, 0))
     }
 
     @Test
@@ -39,26 +39,26 @@ class CalculatorTest {
     fun testDivide22by7By() {
         val myPi = calculator.div(22.0, 7.0)
         println(myPi)
-        Assertions.assertEquals(3.14, myPi, 0.01)
+        assertEquals(3.14, myPi, 0.01)
     }
 
     @Test
     @Order(5)
     fun `Dividing by zero should throw the DivideByZeroException`() {
-        val exception = Assertions.assertThrows(DivideByZeroException::class.java) {
+        val exception = assertThrows(DivideByZeroException::class.java) {
             calculator.div(5.0, 0.0)
         }
 
-        Assertions.assertEquals(5.0, exception.numerator)
+        assertEquals(5.0, exception.numerator)
     }
 
     @Test
     @Order(4)
     fun `The result of adding two numbers should be equal to their total`() {
-        Assertions.assertAll(
+        assertAll(
                 Executable { assertEquals(0, calculator.add(0, 0)) },
-                Executable { Assertions.assertEquals(1, calculator.add(0, 1)) },
-                Executable { Assertions.assertEquals(2, calculator.add(1, 1)) }
+                Executable { assertEquals(1, calculator.add(0, 1)) },
+                Executable { assertEquals(2, calculator.add(1, 1)) }
         )
     }
 
@@ -71,7 +71,7 @@ class CalculatorTest {
     @ParameterizedTest
     @MethodSource("valuesProvider")
     fun testWithValueSource(x: Int, y: Int, total: Int) {
-        val calc: Calculator = Calculator()
+        val calc = Calculator()
         val result = calc.add(x, y)
         assertEquals(total, result, "result $result should be $total")
     }
@@ -86,7 +86,7 @@ class CalculatorTest {
     @TestFactory
     fun testWithTestFactoryData() = testData.map{ (x, y, result) ->
         DynamicTest.dynamicTest("when I add $x and $y then I get $result") {
-            Assertions.assertEquals(result, calculator.add(x, y))
+            assertEquals(result, calculator.add(x, y))
         }
     }
 

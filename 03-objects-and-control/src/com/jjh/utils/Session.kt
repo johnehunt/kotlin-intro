@@ -3,7 +3,7 @@ package com.jjh.utils
 class Session(val id: Int) {
 
     companion object {
-        private val MAX = 100
+        private const val MAX = 100
         private var counter = 0
         private fun next() = counter++
 

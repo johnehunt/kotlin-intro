@@ -8,7 +8,7 @@ fun main() {
         if (i == x) {
             break
         }
-        print("i: $i, ");
+        print("i: $i, ")
     }
     println()
 

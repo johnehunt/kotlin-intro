@@ -1,7 +1,5 @@
 package com.jjh.people
 
-import com.jjh.people.Person
-
 /**
  * Person4 defines a primary constructor and a secondary constructor
  */
