@@ -6,7 +6,7 @@ fun main() {
 
     for (i in 0 until y) {
         if (i == x) {
-            break;
+            break
         }
         print("i: $i, ");
     }

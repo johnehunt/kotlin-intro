@@ -1,6 +1,6 @@
 package com.jjh.casting
 
-class Person()
+class Person
 
 fun main() {
     val any: Any = "Hello"

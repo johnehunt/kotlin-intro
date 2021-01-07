@@ -5,7 +5,7 @@ open class Base {
 }
 
 class Derived : Base() {
-    override fun print(): Unit {
+    override fun print() {
         println("Derived before")
         super.print()
         println("Derived After")

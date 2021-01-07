@@ -6,7 +6,7 @@ package com.jjh.extensions
 fun String.hasLength(len: Int) = this.length == len
 
 fun String.mult(len: Int): String {
-    var result: String = ""
+    var result = ""
     for (i in 0..len) {
         result += this
     }

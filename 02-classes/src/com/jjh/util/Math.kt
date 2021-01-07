@@ -26,7 +26,7 @@ class Math {
 
     fun negate2(value: Int) = -value
 
-    fun printer1(i: Int): Unit {
+    fun printer1(i: Int) {
         println(i)
     }
 

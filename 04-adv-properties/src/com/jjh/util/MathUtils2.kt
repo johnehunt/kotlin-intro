@@ -10,7 +10,7 @@ package com.jjh.util
 object MathUtils2 {
 
     // Specifying useful compile-time constant properties
-    const val ZERO = 0;
+    const val ZERO = 0
     const val MIN: Int = -100
     const val MAX = 100
 

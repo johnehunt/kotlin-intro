@@ -10,7 +10,7 @@ class Person4(val name: String, var age: Int = 0) {
     /**
      * Partner is a public read-write property which is nullable
      */
-    var partner: Person4? = null;
+    var partner: Person4? = null
 
     init {
         println("In Init")
