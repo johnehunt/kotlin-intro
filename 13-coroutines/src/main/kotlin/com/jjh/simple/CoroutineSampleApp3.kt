@@ -2,7 +2,7 @@ package com.jjh.simple
 
 import kotlinx.coroutines.*
 
-suspend fun executeSlowTaskWithResult(): Deferred<Int> =
+suspend fun executeSlowTaskWithResultAsync(): Deferred<Int> =
         GlobalScope.async {
             println("Starting Task")
             delay(5000)
@@ -13,7 +13,7 @@ suspend fun executeSlowTaskWithResult(): Deferred<Int> =
 fun main() {
     println("Launching deferred result task")
     GlobalScope.launch {
-        val result = executeSlowTaskWithResult().await()
+        val result = executeSlowTaskWithResultAsync().await()
         println("result: $result")
     }
     println("After launching coroutine")
