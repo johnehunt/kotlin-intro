@@ -2,19 +2,23 @@ package com.jjh.lists
 
 fun main() {
 
-    // List creation options
-    val myList0: List<String> = ArrayList()
-    val myList1: MutableList<String> = ArrayList()
+    // Explicit list creation options
+    val list0: List<String> = ArrayList()
+    val list1: MutableList<String> = ArrayList()
+    println("myList0: $list0")
+    println("myList1: $list1")
 
-    println("myList0: $myList0")
+    // More idiomatic Kotlin
+    val myList1 = listOf<String>("One", "Two", "Three")
+    val myList2 = listOf("One", "Two", "Three")
+    val myList3 = mutableListOf("Denise", "Adam", "Phoebe")
+    val myList4 = listOf<String>()  // Create an empty list
+
     println("myList1: $myList1")
-
-    val myList2 = listOf<String>("One", "Two", "Three")
-    val myList3 = listOf("One", "Two", "Three")
     println("myList2: $myList2")
-    println("myList3: $myList3")
+    println("myList3: $myList2")
 
-    println("myList2.siz: ${myList2.size}")
+    println("myList2.size: ${myList2.size}")
     println("myList2.first(): ${myList2.first()}")
     println("myList2.last(): ${myList2.last()}")
     println("myList2.takeLast(2): ${myList2.takeLast(2)}")
@@ -23,13 +27,13 @@ fun main() {
     println("myList2.isNotEmpty(): ${myList2.isNotEmpty()}")
     println("myList2.asReversed(): ${myList2.asReversed()}")
 
-    // Can add to myList1 as its a mutable List
+    // Can add to myList3 as its a mutable List
     println("adding to a Mutable List")
-    println("myList1:$myList1")
-    myList1.add("John")
-    println("myList1:$myList1")
-    myList1.addAll(listOf("Denise", "Phoebe"))
-    println("myList1:$myList1")
+    println("myList3:$myList3")
+    myList3.add("John")
+    println("myList3:$myList3")
+    myList3.addAll(listOf("Denise", "Phoebe"))
+    println("myList3:$myList3")
 
     // Accessing an element
     println("Accessing elements by index")
@@ -38,11 +42,11 @@ fun main() {
 
     // Updating an element
     println("Updating elements by index")
-    println("myList1:$myList1")
-    myList1.set(2, "Jasmine")
-    println("myList1:$myList1")
-    myList1[2] = "Adam"
-    println("myList1:$myList1")
+    println("myList3:$myList3")
+    myList3.set(2, "Jasmine")
+    println("myList3: $myList3")
+    myList3[2] = "Gryff"
+    println("myList3: $myList3")
 
     // Checking that an element is in a list
     println("Checking an element is in a list")
