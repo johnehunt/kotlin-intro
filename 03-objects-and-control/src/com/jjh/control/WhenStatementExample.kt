@@ -1,5 +1,7 @@
 package com.jjh.control
 
+class Person
+
 /**
  * Illustrates a Kotlin when statement - similar
  * to case or switch statement in other languages.
@@ -24,10 +26,25 @@ fun main(args: Array<String>) {
     }
     println("result: $result")
 
+    val value2 = "John"
+    when (value2) {
+        "John" -> println("Dad")
+        "Denise" -> println("Mum")
+        else -> println("Not mum or dad")
+    }
+
+    val person = Person()
+    val person1 = person
+    when (person1) {
+        person -> println("its me")
+        else -> println("its not me")
+    }
+
     var x: Any = 32
     when (x) {
         is Int -> println("Its a number")
         is String -> println("Its a String")
+        is Person -> println("Its a Person")
         else -> println("its something else")
     }
 
