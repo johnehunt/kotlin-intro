@@ -2,7 +2,7 @@ package com.jjh.anon
 
 fun main() {
 
-    // Defines a new object which is anonymou
+    // Defines a new object which is anonymous
     val obj = object {
         var x: Int = 0
         val y = 42
