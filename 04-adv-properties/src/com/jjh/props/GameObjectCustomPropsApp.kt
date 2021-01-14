@@ -1,6 +1,6 @@
 package com.jjh.props
 
-fun main(args: Array<String>) {
+fun main() {
     val obj = GameObject()
     println(obj.x)
     obj.x = 10
