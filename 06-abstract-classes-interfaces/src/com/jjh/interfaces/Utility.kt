@@ -26,7 +26,8 @@ interface Utility {
 
 }
 
-class Box(override val name: String) : Utility {
+// class Box(override val name: String) : Utility, Any() {
+class Box(override val name: String) : Any(), Utility {
 
     override var count: Int = 0
 
