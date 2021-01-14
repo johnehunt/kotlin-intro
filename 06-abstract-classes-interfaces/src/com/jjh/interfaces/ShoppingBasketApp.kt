@@ -8,7 +8,9 @@ fun main() {
     Printer.printMe()
     // Compile error
     // ShoppingBasket.printMe()
-    // Compile error
     val basket = ShoppingBasket()
     // basket.printMe()
+    basket.prettyPrint()
+    // Compile error
+    // Printer.prettyPrint()
 }
