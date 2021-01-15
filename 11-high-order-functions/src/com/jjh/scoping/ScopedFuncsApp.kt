@@ -61,10 +61,12 @@ fun main() {
     println("result: $result")
 
     // Conditional Execution
+    // Take the value if the condition is met
     service.takeIf { service.port > 1024 }?.run {
         println(query("get"))
     }
 
+    // Take the value if the condition is not met
     service.takeUnless{service.port > 1024 }?.run {
         println(query("get"))
     }
