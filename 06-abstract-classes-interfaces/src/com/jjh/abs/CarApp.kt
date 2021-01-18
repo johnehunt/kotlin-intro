@@ -1,6 +1,6 @@
 package com.jjh.abs
 
-fun main(args: Array<String>) {
+fun main() {
     val c: Conveyance = Car()
     c.startup()
     val result = c.drive(10)
