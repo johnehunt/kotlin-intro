@@ -19,7 +19,8 @@ fun main() {
 
     println(ship)
     val otherShip = ship.copy(x = 20.0)
-    println(otherShip)
+    println("othership: $otherShip")
+    println("otherShip.image: ${otherShip.image}")
 
     println("------")
 
