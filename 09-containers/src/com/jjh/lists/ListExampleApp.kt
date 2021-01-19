@@ -37,13 +37,13 @@ fun main() {
 
     // Accessing an element
     println("Accessing elements by index")
-    println("myList1.get(2): ${myList1.get(2)}")
+    println("myList1.get(2): ${myList1.get(2)}") // more common to use index
     println("myList1[2]:${myList1[2]}")
 
     // Updating an element
     println("Updating elements by index")
     println("myList3:$myList3")
-    myList3.set(2, "Jasmine")
+    myList3.set(2, "Jasmine") // more common to use index access
     println("myList3: $myList3")
     myList3[2] = "Gryff"
     println("myList3: $myList3")
