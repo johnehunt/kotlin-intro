@@ -14,6 +14,10 @@ fun main() {
     println(pair1.first)
     println(pair1.second)
 
+    // Destructing supported by Pairs
+    val (x, y) = pair1
+    println("x: $x, y: $y")
+
     println(pair1.copy(first = 3))
     println(pair1)
 
@@ -27,5 +31,9 @@ fun main() {
     println(triple2.first)
     println(triple2.second)
     println(triple2.third)
+
+    // Destructing supported by Triples
+    val (a, b, c) = triple2
+    println("a: $a, b: $b, c: $c")
 
 }
