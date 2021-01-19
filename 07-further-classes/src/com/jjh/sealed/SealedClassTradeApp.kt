@@ -2,7 +2,7 @@ package com.jjh.sealed
 
 import com.jjh.sealed.TypeDescripter.describe
 
-abstract sealed class Trade
+sealed class Trade
 
 data class EquityTrade(val name: String) : Trade()
 data class FxTrade(val currency1: String, val currency2: String) : Trade()
