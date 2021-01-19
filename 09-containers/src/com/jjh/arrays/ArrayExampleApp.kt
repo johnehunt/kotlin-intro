@@ -6,9 +6,11 @@ fun main(args: Array<String>) {
     // Create some empty arrays
     val anything: Array<Any> = emptyArray()
     val names: Array<String> = emptyArray()
+    val data = arrayOf<String>()
 
     println("anything: $anything")
     println("names: $names")
+    println("data: $data")
     println("anything.size: ${anything.size}")
 
     // Create an array of Integers
@@ -34,8 +36,12 @@ fun main(args: Array<String>) {
     }
 
     // Can also have arrays of custom objects
-    // Type of array infered form arrayOf list - ie an array of Persons
-    val personArray = arrayOf(Person("John"), Person("Denise"), Person("Adam"), Person("Phoebe"))
+    // Type of array inferred from arrayOf list -
+    // ie an array of Persons
+    val personArray = arrayOf(Person("John"),
+                              Person("Denise"),
+                              Person("Adam"),
+                              Person("Phoebe"))
     println("personArray: $personArray")
     for (person in personArray) {
         println("person: $person")
