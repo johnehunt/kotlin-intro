@@ -21,6 +21,8 @@ fun main() {
     println(pair1.copy(first = 3))
     println(pair1)
 
+    println("pair1.toList(): ${pair1.toList()}")
+
     println("-----")
 
     val triple1 = Triple<Int, String, String>(1, "John", "Denise")
@@ -31,6 +33,8 @@ fun main() {
     println(triple2.first)
     println(triple2.second)
     println(triple2.third)
+
+    println("triple2.toList(): ${triple2.toList()}")
 
     // Destructing supported by Triples
     val (a, b, c) = triple2
