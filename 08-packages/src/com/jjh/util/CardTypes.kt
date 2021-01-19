@@ -1,5 +1,5 @@
 package com.jjh.util
 
-enum class CarTypes {
+enum class CardTypes {
     SILVER, GOLD, PLATINUM
 }
