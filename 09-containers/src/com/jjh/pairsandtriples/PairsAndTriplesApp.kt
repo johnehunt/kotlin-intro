@@ -4,7 +4,7 @@ fun main() {
     val pair1 = Pair<Int, String>(1, "John")
     val pair2 = Pair(2, "Denise")
     val pair3 = Pair("Adam", "Jasmine")
-    val pair4 = "Phoebe" to "Gryff" // shorthnd form
+    val pair4 = "Phoebe" to "Gryff" // shorthand form
 
     println(pair1)
     println(pair2)
