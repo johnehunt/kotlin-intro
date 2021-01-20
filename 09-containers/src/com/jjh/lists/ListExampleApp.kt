@@ -1,5 +1,7 @@
 package com.jjh.lists
 
+import java.util.Collections.synchronizedList
+
 fun main() {
 
     // Explicit list creation options
@@ -65,5 +67,9 @@ fun main() {
     for (index in myList1.indices) {
         println("index: $index - value ${myList1[index]}")
     }
+
+    // Creating a synchronized mutable list
+    val syncedList = synchronizedList(myList3)
+    println(syncedList)
 
 }

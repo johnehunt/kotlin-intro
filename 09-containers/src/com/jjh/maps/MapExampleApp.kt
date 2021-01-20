@@ -1,5 +1,7 @@
 package com.jjh.maps
 
+import java.util.Collections.synchronizedMap
+
 fun main() {
     val map1: Map<Int, String> = mapOf(
             1 to "John",
@@ -49,5 +51,12 @@ fun main() {
     }
     println()
 
-    map.forEach { (k, v) -> print("$k -> $v, ") }
+    for (keyValuePair in map) {
+        println (keyValuePair)
+    }
+
+    // Synced mutable map
+    val syncedMap = synchronizedMap(map)
+    println(syncedMap)
+
 }

@@ -9,6 +9,6 @@ fun main() {
     println("copyOf(): ${names.copyOf()}")
     println("sliceArray(2..3): ${names.sliceArray(2..3)}")
     names.reverse()
-    println("reversed list: $names")
+    println("reversed array: $names")
     println("asList(): ${names.asList()}")
 }
