@@ -5,7 +5,7 @@ class Calculator(private val value: Int) {
         private set
 
     inner class Worker {
-        fun calc() {
+        fun performCalculation() {
             for (i in 0 until value) {
                 result += i
             }
@@ -15,4 +15,11 @@ class Calculator(private val value: Int) {
     val worker: Worker
         get() = Worker()
 
+}
+
+fun main(args: Array<String>) {
+    val calc = Calculator(5)
+    val worker = calc.worker
+    worker.performCalculation()
+    println("calc.result: " + calc.result)
 }
