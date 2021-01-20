@@ -1,7 +1,7 @@
 package com.jjh.util
 
 object Course {
-    fun present() {
+    fun presentation() {
         println("Course.presentation")
     }
 }
