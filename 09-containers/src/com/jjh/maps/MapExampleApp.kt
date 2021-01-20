@@ -51,8 +51,8 @@ fun main() {
     }
     println()
 
-    for (keyValuePair in map) {
-        println (keyValuePair)
+    for (mapEntry in map) {
+        println (mapEntry)
     }
 
     // Synced mutable map
