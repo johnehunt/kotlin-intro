@@ -24,3 +24,8 @@ class CalculateFib {
         fib.printFib(number)
     }
 }
+
+fun main(args: Array<String>) {
+    val fib = CalculateFib()
+    fib.printFibSequence(5)
+}
