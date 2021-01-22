@@ -19,6 +19,7 @@ fun main() {
     println("myList1: $myList1")
     println("myList2: $myList2")
     println("myList3: $myList2")
+    println("myList4: $myList4")
 
     println("myList2.size: ${myList2.size}")
     println("myList2.first(): ${myList2.first()}")
@@ -50,10 +51,29 @@ fun main() {
     myList3[2] = "Gryff"
     println("myList3: $myList3")
 
+    // Inserting an element
+    println("Inserting an element")
+    val aList = mutableListOf("Adele", "Madonna", "Cher")
+    println(aList)
+    aList.add(1, "Paloma")
+    println(aList)
+
+    // Removing from a list
+    println("Removing from a list")
+    val anotherList = mutableListOf("Gary", "Mark", "Robbie", "Jason", "Howard")
+    println(anotherList)
+    anotherList.remove("Robbie")
+    println(anotherList)
+    anotherList.removeAt(2)
+    println(anotherList)
+
     // Checking that an element is in a list
     println("Checking an element is in a list")
-    println("myList1.contains(\"Adam\"): ${myList1.contains("Adam")}")
-    println("myList1.indexOf(\"Adam\"): ${myList1.indexOf("Adam")}")
+    val names = listOf("Adam", "Jasmine", "Phoebe", "Gryff")
+    println("names.contains(\"Adam\"): ${names.contains("Adam")}")
+    println("names.contains(\"Bob\"): ${names.contains("Bob")}")
+    println("names.indexOf(\"Adam\"): ${names.indexOf("Adam")}")
+    println("names.indexOf(\"Bob\"): ${names.indexOf("Bob")}")
 
     // Looping through a list
     // Iterate over values in array
@@ -68,8 +88,19 @@ fun main() {
         println("index: $index - value ${myList1[index]}")
     }
 
+    // Take a slice of a list
+    println("Take a slice of a list")
+    val group = listOf("John", "Paul", "George", "Ringo")
+    println(group)
+    println(group.slice((1..3)))
+
+
     // Creating a synchronized mutable list
     val syncedList = synchronizedList(myList3)
     println(syncedList)
 
+    val l1 = mutableListOf("Apple", "Orange")
+    val l2 = listOf("Banana", "Pear")
+    val l3 = l1 + l2
+    println(l3)
 }
