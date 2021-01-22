@@ -10,6 +10,9 @@ data class Counter(var value: Int) {
     operator fun plusAssign(c: Counter) {
         value += c.value
     }
+
+    operator fun inc():Counter = Counter(value + 1)
+    operator fun dec():Counter = Counter(value - 1)
 }
 
 fun main() {
