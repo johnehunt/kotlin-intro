@@ -7,8 +7,8 @@ fun main() {
     val set3 = setOf<String>("One", "Two", "Three")
     val set4 = setOf("A", "B", "C")
     val set5 = mutableSetOf("Chasing Pavements",
-            "Rumour Has it",
-            "Turning Tables")
+        "Rumour Has it",
+        "Turning Tables")
 
     println(set1)
     println(set2)
@@ -32,6 +32,12 @@ fun main() {
     set5.add("Skyfall")
     println(set5)
     set5.add("Skyfall")
+    println(set5)
+
+    set5.addAll(listOf("Hello", "Rolling In the Deep", "Hello"))
+    println(set5)
+
+    set5.remove("Hello")
     println(set5)
 
     println("--------")
