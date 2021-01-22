@@ -34,6 +34,8 @@ fun main() {
     println(triple2.second)
     println(triple2.third)
 
+    println(triple2.copy(first=3))
+
     println("triple2.toList(): ${triple2.toList()}")
 
     // Destructing supported by Triples
