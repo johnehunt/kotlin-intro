@@ -2,7 +2,11 @@ package com.jjh.sealed
 
 import com.jjh.sealed.TypeDescripter.describe
 
-sealed class Trade
+sealed class Trade(val id: Int=0) {
+    fun printId() {
+        println(id)
+    }
+}
 
 data class EquityTrade(val name: String) : Trade()
 data class FxTrade(val currency1: String, val currency2: String) : Trade()
