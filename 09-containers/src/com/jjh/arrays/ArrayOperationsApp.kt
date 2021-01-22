@@ -10,5 +10,6 @@ fun main() {
     println("sliceArray(2..3): ${names.sliceArray(2..3)}")
     names.reverse()
     println("reversed array: $names")
-    println("asList(): ${names.asList()}")
+    for (name in names) { print("$name, ") }
+    println("\nasList(): ${names.asList()}")
 }
