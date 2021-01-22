@@ -4,18 +4,18 @@ import java.util.Collections.synchronizedMap
 
 fun main() {
     val map1: Map<Int, String> = mapOf(
-            1 to "John",
-            2 to "Denise")
+        1 to "John",
+        2 to "Denise")
 
     val map2 = mapOf(
-            1 to "John",
-            2 to "Denise")
+        1 to "John",
+        2 to "Denise")
 
     val map = mutableMapOf(
-            "Ireland" to "Dublin",
-            "UK" to "London",
-            "France" to "Paris",
-            "Spain" to "Madrid")
+        "Ireland" to "Dublin",
+        "UK" to "London",
+        "France" to "Paris",
+        "Spain" to "Madrid")
 
     println(map1)
     println(map2)
@@ -39,6 +39,19 @@ fun main() {
     map["Germany"] = "Berlin" // more common format
     println(map)
 
+    // Remove an entry
+    val cities = mutableMapOf(
+        "Ireland" to "Dublin",
+        "UK" to "London",
+        "France" to "Paris",
+        "Spain" to "Madrid")
+    // Mutable map operations
+    cities.remove("Germany")
+    println("cities: $cities")
+
+    println(cities.values)
+    println(cities.keys)
+
     println("---------")
 
     for (key in map.keys) {
@@ -58,5 +71,9 @@ fun main() {
     // Synced mutable map
     val syncedMap = synchronizedMap(map)
     println(syncedMap)
+
+    // Replace a keys value
+    map["UK"] = "Swansea"
+    print(map)
 
 }
