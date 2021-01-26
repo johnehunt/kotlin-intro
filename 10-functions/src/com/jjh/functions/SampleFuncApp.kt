@@ -13,11 +13,11 @@ fun main(args: Array<String>) {
     println("add(2, 3) ${add(2, 3)}")
 
     // Default arguments
-    println("increment(2) ${increment(2)}")
-    println("increment(2, 3) ${increment(2, 3)}")
+    println("increment(2) ${plus(2)}")
+    println("increment(2, 3) ${plus(2, 3)}")
 
     // Using named arguments
-    println("increment(x = 2) ${increment(x = 2)}")
+    println("increment(x = 2) ${plus(x = 2)}")
     println("add(x=2, y=3) ${add(x = 2, y = 3)}")
     println("add(y=3, x=2) ${add(y = 3, x = 2)}")
 

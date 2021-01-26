@@ -26,12 +26,16 @@ fun double(x: Int): Int {
     return 2 * x
 }
 
+fun increment(i: Int): Int {
+    return i + 1
+}
+
 fun add(x: Int, y: Int): Int {
     return x + y
 }
 
 // Function parameters can have default values
-fun increment(x: Int, y: Int = 1): Int {
+fun plus(x: Int, y: Int = 1): Int {
     return x + y
 }
 
