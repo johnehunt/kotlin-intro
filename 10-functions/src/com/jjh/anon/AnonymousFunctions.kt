@@ -1,7 +1,7 @@
 package com.jjh.anon
 
 fun main() {
-    val increment = fun(i: Int): Int {
+    val increment: (Int) -> Int = fun(i: Int): Int {
         return i + 1
     }
     val decrement = fun(i: Int): Int = i - 1
