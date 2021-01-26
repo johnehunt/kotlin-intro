@@ -2,7 +2,8 @@ package com.jjh.lambdas
 
 fun main() {
 
-    var increase: (Int) -> Int = {x -> x + 1}
+    var increase: (Int) -> Int = {x: Int -> x + 1}
+    // var increase: (Int) -> Int = {x -> x + 1}
     println("increase: $increase")
     println("increase(5): ${increase(5)}")
 
