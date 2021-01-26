@@ -22,10 +22,8 @@ fun bang(x: Int): Int {
 }
 
 tailrec fun bangTailRec(x: Int): Int {
-    return if (x == 0)
-        throw Exception("Bang!")
-    else
-        bangTailRec(x - 1)
+    return if (x == 0) throw Exception("Bang!")
+    else bangTailRec(x - 1)
 }
 
 class Processor {
@@ -42,7 +40,7 @@ fun main() {
     println(factorialTailRec(n = 5))
     // println(bang(4))
     // println(bangTailRec(4))
-    val processor = Processor()
-    processor.bangTailRecMethod(4)
+    // val processor = Processor()
+    // processor.bangTailRecMethod(4)
 }
 
