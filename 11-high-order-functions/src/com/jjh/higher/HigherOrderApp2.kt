@@ -1,5 +1,8 @@
 package com.jjh.higher
 
+/**
+ * Member functions can also be higher order
+ */
 object Math {
     fun processor(x: Double, y: Double, func: (Double, Double) -> Double): Double {
         return func(x, y)
@@ -13,17 +16,17 @@ object Math {
 
 typealias IntFunction = (Int) -> Int
 
-object HigherOrder2 {
-
+object HigherOrder {
     // Takes a function and an int
-    val processor: (Int, IntFunction) -> Int = {x, func -> func(x)}
-
+    fun processor(x: Int, func: IntFunction): Int {
+        return func(x)
+    }
 }
 
 fun main() {
 
-    val increment = fun(i: Int)= i + 1
-    println(HigherOrder.processor(5, increment))
+    val converter = fun(i: Int)= i.toString()
+    println(Math.processor(5, converter))
 
     // Long hand form
     println(HigherOrder.processor(5, { x -> x + 1 }))

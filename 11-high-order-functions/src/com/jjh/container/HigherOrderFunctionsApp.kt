@@ -45,11 +45,11 @@ fun main() {
 
     // Grouping
     val trades = listOf(
-            Trade(1, "IBM", 10),
-            Trade(2, "MSoft", 5),
-            Trade(3, "IBM", 15),
-            Trade(4, "Oracle", 11),
-            Trade(5, "MSoft", 7)
+        Trade(1, "IBM", 10),
+        Trade(2, "MSoft", 5),
+        Trade(3, "IBM", 15),
+        Trade(4, "Oracle", 11),
+        Trade(5, "MSoft", 7)
     )
 
     val groupByEquity = trades.groupBy { t -> t.equity }
@@ -75,5 +75,21 @@ fun main() {
     println(ll.flatten())
 
     println(ll.flatMap { it.filter { i -> i > 1 } })
+
+    val data = listOf(
+        "one,two,three",
+        "John,Paul,George, Ringo",
+        "Freddie,Brian,Roger,John"
+    )
+
+    val d1 = data.map { it.split(",") }
+    println("d1: $d1")
+    val f1 = d1.flatten()
+    println("f1: $f1")
+
+    // Equivalent to above
+    val fm1 = data.flatMap { it.split(",") }
+    println("fm1: $fm1")
+
 
 }

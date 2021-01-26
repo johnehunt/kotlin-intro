@@ -1,5 +1,8 @@
 package com.jjh.higher
 
+/**
+ * Classes can have higher order functions
+ */
 class Calculator {
     fun execute(x: Int, func: (Int) -> Int): Int {
         return func(x)
