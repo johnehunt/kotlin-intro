@@ -18,39 +18,42 @@ class Service(val url: String) {
 }
 
 fun main() {
-    // Use apply for code blocks that don't return a value and configure
+    // Use apply for code blocks that return
+    // the bound instance and (typically) configure
     // the instance.
     val user = User("John").apply {
         this.id = "123"
-        game = "Nightfall"
+        game = "Nightfall"  // can reference this implicitly
     }
     println("${user.id} ${user.name}")
 
     // Use let to execute 1 or more operations on an object
     // let lambda returns a result
     val s = "Hello World"
-    val s2 = s.let { s -> s.toUpperCase() }
+    val s2 = s.let { it.toUpperCase() }
     val s3 = s.let {
         println(it)
         it.toUpperCase()
     }
 
     // with - allows sequence of operations to be written all
-    // relating to the object passed to it. Avoid repeatedly referencing object
+    // relating to the object passed to it. Avoid repeatedly
+    // referencing object. May be a nullable
     val label = with(user) {
-        id = "new$id"
+        id = "new$id" // implicit reference to this
         game = "new$game"
         println(this)
         this.toString()
     }
     println("label: $label")
 
-    // Also similar to with but the object is not automatically bound
-    // to 'this' instead 'it' makes it available as a parameter
-    user.also { obj -> println(obj) }
-    user.also { println(it) }
+    // Receiver Instance bound to it, returns bound
+    // instance as result
+    val user2 = user.also { println(it) }
 
-    // run useful when your lambda contains both the
+    // 'run' binds receiver to this returns result of lambda
+    // can reference this directly
+    // useful when your lambda contains both the
     // object initialization and the computation of the
     // return value.
     val service = Service("http://www.midmarsh.com")
