@@ -1,21 +1,30 @@
 package com.jjh.higher
 
-fun processor(x: Int, func: (Int) -> Int): Int {
+typealias MyIntFunction = (Int) -> Int
+
+fun processor(x: Int, func: MyIntFunction): Int {
     return func(x)
 }
 
+fun increment(i: Int) = i + 1
 
 fun main() {
 
-    val increment = fun(i: Int)= i + 1
-    println(processor(5, increment))
+    val amount = 5
+    println(processor(amount, ::increment))
 
-    // Long hand form
-    println(processor(5, { x -> x + 1 }))
+    val inc: MyIntFunction = fun(x: Int) = x + 1
 
-    // Trailing lambda syntax - preferred Kotlin style
-    println(processor(5) { x -> x + 1 })
+    val r1 = processor(amount, fun(x: Int) = x + 1)
+    println(r1)
 
-    // it: implicit name for a single parameter
-    println(processor(5) { it + 1 })
+    val r2 = processor(amount, {i -> i + 1})
+    println(r2)
+
+    val r3 = processor(amount) {i -> i + 1}
+    println(r3)
+
+    val r4 = processor(amount) {it + 1}
+    println(r4)
+
 }
