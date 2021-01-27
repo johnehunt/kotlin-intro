@@ -1,6 +1,17 @@
 // Provides examples of Return @ labels
 package com.jjh.conditionals
 
+fun processList0() {
+    println("Starting processList0")
+    listOf(1, 2, 3, 4, 5).forEach(
+        fun (i: Int) {
+            if (i == 3) return // Return from anonymous function
+            print("$i, ")
+        }
+    )
+    println("\nDone")
+}
+
 // Equivalent of a break
 fun processList1() {
     println("Starting processList1")
@@ -32,6 +43,8 @@ fun processList3() {
 }
 
 fun main () {
+    processList0()
+    println("\n----------------")
     processList1()
     println("\n----------------")
     processList2()
