@@ -1,5 +1,5 @@
 // Provides examples of Return @ labels
-package com.jjh.conditionals
+package com.jjh.labels
 
 fun processList0() {
     println("Starting processList0")
