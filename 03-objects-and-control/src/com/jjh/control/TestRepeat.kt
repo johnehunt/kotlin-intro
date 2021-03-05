@@ -5,4 +5,8 @@ fun main() {
         print("Hello, ")
     }
     println()
+    repeat(3) {
+        print("Hello $it, ")
+    }
+    println()
 }
