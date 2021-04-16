@@ -13,6 +13,10 @@ fun main() {
     println("data: $data")
     println("anything.size: ${anything.size}")
 
+    // Create an array that can hold strings
+    val stringData = arrayOfNulls<String>(5)
+    println("stringData.size: ${stringData.size}")
+
     // Create an array of Integers
     val intArray1 = IntArray(5)  // Array<Int>
     val intArray2 = intArrayOf(2, 4, 6, 8)
