@@ -40,12 +40,22 @@ fun main(args: Array<String>) {
         else -> println("its not me")
     }
 
-    var x: Any = 32
+    val x: Any = 32
     when (x) {
         is Int -> println("Its a number")
         is String -> println("Its a String")
         is Person -> println("Its a Person")
         else -> println("its something else")
+    }
+
+    val total = 34
+    when (total) {
+        0 -> {
+            print("Its Zero")
+            println("Never mind")
+        }
+        in 1..5 -> println("Not Bad")
+        else -> println("Excellent")
     }
 
 }
